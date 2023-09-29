@@ -40,7 +40,7 @@ html {
   -webkit-tap-highlight-color:white}
 
     body {
-
+      max-height: 100vh; 
       margin: 0;
       font-family:'GalanoMedium';
       font-size: 16px;
@@ -51,7 +51,6 @@ html {
     
 
     .container {
-      width: 100%;
       padding-right: 15px;
       padding-left: 15px;
       margin-right:auto;
@@ -2133,23 +2132,20 @@ CONTENIDO
   @media (max-width: 540px) {
   /* NAV BAR*/
   .ftco-section .container{
-    width: 65%;
+
+    width: 100%;
     margin-left: 10px; }
 
-  .bannerSobrepuesto{
-    display: block;  
-    }
-
-    .bannerSobrepuesto img {
-      height: 320px;
-      margin-left: 130px;
-    }
-
+.main-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
   .main-banner h4 {
     text-align: center;
     margin-top: -20px;
     font-size: 30px;
-    margin-left: -20px;
   }
   .main-banner h4 em {
     text-align: center;
@@ -2158,37 +2154,27 @@ CONTENIDO
     display: block;
     font-size: 15px;
   }
-.main-button{ margin-left: -10px;}
+.main-button{ margin-left: 20px;}
   }
 
 
 
   /*MEDIDA MAS PEQUEÑA*/
   @media (max-width: 361px) {
+
   .logonav{display: none;}
   .logonav2{display: block ; width: 40px; margin-left: 20px; margin-right: 40px;}
 
   /* NAV BAR*/
     .ftco-section .container{
-      width: 60%;
-      margin-left: -10px; }
+      width: 100%; }
 
-    .bannerSobrepuesto{
-      display: none;  }
 
-.contenedor{
-  width: 360;
-margin-left: -15px;
-  border: solid 2px red;
-}
-.main-banner {
-  width: 215px;
-}
     .main-banner h4 {
+      margin-left: 5px;
       text-align: center;
       margin-top: -30px;
       font-size: 28px;
-      margin-left: -25px;
     }
     .main-banner h4 em {
       text-align: center;
@@ -2198,9 +2184,8 @@ margin-left: -15px;
       font-size: 14px;
       margin-left: 10px;
     }
-    .main-button{ margin-left: -30px;}
+    .main-button{ margin-left: 10px;}
   }
 
 
  
-  
