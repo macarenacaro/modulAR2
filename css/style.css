@@ -34,6 +34,7 @@ Generales
 ---------------------*/
 
 html {
+ 
   font-family: 'GalanoBold';
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -54,19 +55,10 @@ html {
       padding-right: 15px;
       padding-left: 15px;
       margin-right:auto;
-      margin-left: auto; }
-      @media (min-width: 576px) {
-        .container {
-          max-width: 540px; } }
-      @media (min-width: 768px) {
-        .container {
-          max-width: 720px; } }
-      @media (min-width: 992px) {
-        .container {
-          max-width: 960px; } }
-      @media (min-width: 1200px) {
-        .container {
-          max-width: 1140px; } }
+      margin-left: auto; 
+    }
+
+
     
 
 /*-------------------
@@ -74,13 +66,13 @@ NAVBAR
 ---------------------*/
 
 /*LOGO*/
-.logonav{height:50px;}
+.logonav{height:50px; margin-right: 50px;}
 .logonav2{display: none;}
 
 /*NAVEGAGOR GENERAL*/
     .ftco-navbar-light {
       font-family:'GalanoMedium';
-      background: #fff !important;
+      background: #ffffffa6 !important ; /*opacidad del nav*/
       z-index: 3;
       padding: 10px 10px;
       border-radius: 5px;
@@ -90,6 +82,7 @@ NAVBAR
      
      /*RESPONSIVE GENERALES*/
       @media (max-width: 991.98px) {
+
         .ftco-navbar-light {
           width: 100%;
           position: relative;
@@ -102,9 +95,15 @@ NAVBAR
               list-style: none; 
               padding-bottom: 10px; } }
  /*SEARCH*/     
- #buscar{
+ #buscar, #buscar2{
  font-family: 'GalanoLight';
+ background-color: transparent;
+ border: solid 1px #bebebe;
+ margin-right: 15px;
+ border-radius: 6px;
  }  
+
+ #buscar2{display: none;}
  
  @media (max-width: 1205px) {
   #buscar {
@@ -263,7 +262,7 @@ a:not([href]):not([tabindex]) {
   .fixed-top{
       position: sticky;
       margin:auto;
-     width: 1080px; 
+     width: 90%; 
      box-shadow: 0 3px 5px -3px rgba(0, 51, 102, 0.345); }
 
      @media (max-width: 1212px) {
@@ -2007,21 +2006,21 @@ CONTENIDO
 ---------------------*
 
    /************** CONTENIDO DE PAGINA ***************/
-   body .page-content {
+
+ 
+   /*MARGEN DEL RECUADRO EXTERIOR BLANCO*/
+   .contenedor .row{
     margin-top: 30px;
+   }
+   body .page-content {
     background-color:#fff;
     padding: 30px;
     border-radius: 15px;
-    /*display: flex;   /*PARA AGREGAR CONTENIDO IMG SUPERPUESTA*/
-   /* flex-direction: column;*/
+    width: 90vw;
+    margin: auto;
   }
 
-  @media (max-width: 767px) {
-    body .page-content {
-      margin-top: 20px;
-      padding: 0px 20px;
-    }}
-
+ 
     /* ********** Banner Style **************/
 
 .main-banner {
@@ -2031,9 +2030,6 @@ CONTENIDO
   max-height: 250px;
   border-radius: 15px;
   padding: 50px 60px;
-  /*display: flex;
-  flex-direction: COL;
-  justify-content: right ;*/  /* VER IMAGEN SOBREPUESTA*/
 }
 
 
@@ -2041,7 +2037,7 @@ CONTENIDO
   color:White;
   font-family: 'GalanoMedium';
   font-size: 40px;
-  margin-top: 0px;
+  margin-top: -30px;
   line-height : 40px; /*interlineado*/
 }
 
@@ -2054,12 +2050,20 @@ CONTENIDO
 
 
 /*BANNER IMG SUPERPUESTA*/
-.row .bannerSobrepuesto{
-  border: solid 3px pink;
-  margin-top: -90px;
-  align-self: flex-start;
+.main-banner .row{
+  display: flex; flex-direction: row;
 }
 
+.row .circle{
+  align-self: flex-start;
+  margin-top: -9.5vw;
+  width: 20px;
+}
+
+.circle img{
+  margin-right: -200;
+  height: 25vw; 
+}
 
   /***** BOTON DE BANNER*****/
   .main-button a {
@@ -2075,7 +2079,7 @@ CONTENIDO
     transition: all .3s;
     position: relative;
     overflow: hidden;
-    margin-top: -20px;
+    margin-top: -40px;
   }
   
   .main-button a:hover {
@@ -2083,108 +2087,123 @@ CONTENIDO
     color: rgb(0, 204, 153);
   }
 
-
-    /*MEDIDAS CON SUPERPUESTO GRANDE*/
-    @media (max-width: 1280px) {
-     /*BANNER IMG SUPERPUESTA*/
-    .row .bannerSobrepuesto{
-      margin-left: -150px;
-      }
-    }
   
-  /*MEDIDAS CON SUPERPUESTO GRANDE*/
-  @media (max-width: 1201px) {
+  /* RESPONSIVE BANNER Y CIRCULO*/
+  @media (max-width: 1024px) {
 
     .main-banner h4 {
-      margin-top: 20px;
-      font-size: 35px;}
+      margin-top: -50px ;}
+
+      .row .circle{
+        margin-top: -8.7vw;
+      }
+      .circle img{
+        height: 26vw; 
+      }
+  }
+
+  @media (max-width: 991px) {
+    #buscar2{display: block;}
+    .logonav{display: none;}
+  .logonav2{display: block ; width: 40px; margin-left: 20px; margin-right: 40px;}
+  }
+
+  @media (max-width: 768px) {
+
+
+    body .page-content .main-banner {
+      height: 170px;
+      justify-content: left ;
+    }
+
+    .main-banner h4 {
+      font-size: 30px;
+      margin-left: -40px;
+      text-align: left;
+      margin-top:-70px ;}
 
       .main-banner h4 em {
-        margin-top: 10px;
-        line-height: 20px;
         display: block;
-        font-size: 20px;    
-    }
-  }
+        font-size: 25px;
+        margin-top: -5px;
+      }
 
-   /*MEDIDAS CON SUPERPUESTO - pequeño*/
-   @media (max-width: 993px) {
+      .row .circle{
+        margin-top: -12.7vw;
+        margin-right: 160px;
+      }
 
-     /* NAV BAR*/
-  .ftco-section .container{
-    width: 100%;
-    margin-left: 20px; }
-
-    .main-banner h4 {
-      display: block;
-      font-size: 20px;
-      line-height: 25px;
-      font-size: 28px;
+      .circle img{
+        height: 26vw; 
+      }
     }
 
-    .bannerSobrepuesto img {
-      height: 320px;
-      margin-right: -50px;
+
+    /*  SEARCH, BANER TITULO Y CIRCULO*/
+    @media (max-width: 750px){
+      #buscar2{display: none;}
+
+
+      .main-banner h4 {
+        margin-left: -55px;
+        font-size: 25px;
+        line-height: 25px ;}
+  
+        .main-banner h4 em {
+          display: block;
+          font-size: 3vw;
+          margin-top:5px;
+          line-height: 15px;
+          
+        }
+  
+        .row .circle{
+          margin-top: -16.7vw;
+          margin-left: -20px;
+        }
+  
+        .circle img{
+          height: 35vw; 
+        }
+        .main-button a{
+          margin-top:-20px;
+          font-size: 15px;
+           margin-left: -10px;}
+
+
     }
-  }
-
-
-  @media (max-width: 540px) {
-  /* NAV BAR*/
-  .ftco-section .container{
-
-    width: 100%;
-    margin-left: 10px; }
-
-.main-banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
-}
-  .main-banner h4 {
-    text-align: center;
-    margin-top: -20px;
-    font-size: 30px;
-  }
-  .main-banner h4 em {
-    text-align: center;
-    margin-top: 20px;
-    line-height: 20px;
-    display: block;
-    font-size: 15px;
-  }
-.main-button{ margin-left: 20px;}
-  }
-
-
-
+  
   /*MEDIDA MAS PEQUEÑA*/
-  @media (max-width: 361px) {
-
-  .logonav{display: none;}
-  .logonav2{display: block ; width: 40px; margin-left: 20px; margin-right: 40px;}
-
-  /* NAV BAR*/
-    .ftco-section .container{
-      width: 100%; }
-
+  @media (max-width: 320px) {
 
     .main-banner h4 {
-      margin-left: 5px;
-      text-align: center;
-      margin-top: -30px;
-      font-size: 28px;
+      margin-left: -50px;
+      margin-top: -40px;
+      font-size: 18px;
+      line-height: 16px;
+
     }
     .main-banner h4 em {
-      text-align: center;
-      margin-top: 20px;
-      line-height: 15px;
-      display: block;
-      font-size: 14px;
-      margin-left: 10px;
+      line-height: 13px;
+      margin-top: 10px;
+      font-size: 12px;
     }
-    .main-button{ margin-left: 10px;}
+
+    .main-button a{
+      display: none;
+    }
+
+    .row .circle{
+      margin-top: -18vw;
+      margin-left: -20px;
+    }
+
+    .circle img{
+      height: 40vw; 
+    }
+
+
+
   }
 
 
