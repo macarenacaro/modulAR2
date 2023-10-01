@@ -2036,10 +2036,9 @@ CONTENIDO
     /* ********** Banner Style **************/
 
 .main-banner {
-  background-image: url(../images/banner.png);
-  background-position: center center;
-  background-size: cover;
-  max-height: 230px;
+  background-image: url(../images/banner4.png);
+  background-position:right bottom;
+  background-size:cover;
   border-radius: 15px;
   padding: 50px 60px;
 }
@@ -2099,6 +2098,38 @@ CONTENIDO
     color: rgb(0, 204, 153);
   }
 
+/* MAS GRANDE DE TOOOODOS*/
+ /* RESPONSIVE BANNER Y CIRCULO*/
+ @media (max-width: 1680px) {
+  .main-banner{
+    max-height: 300px;
+    background-position:right bottom;
+    background-size:cover;
+  }
+  .row .circle{
+    margin-top: -7vw;
+  }
+  .circle img{
+    height: 22vw; 
+  }
+ }
+
+  /* RESPONSIVE BANNER Y CIRCULO*/
+  @media (max-width: 1280px) {
+    .main-banner{
+      max-height: 300px;
+      background-position:right bottom;
+      background-size:cover;
+    }
+    .row .circle{
+      margin-top: -7.5vw;
+    }
+    .circle img{
+      height: 28vw; 
+    }
+   }
+
+
   
   /* RESPONSIVE BANNER Y CIRCULO*/
   @media (max-width: 1064px) {
@@ -2131,7 +2162,7 @@ CONTENIDO
     font-size: 30px;}
 
     .main-banner {
-      height: 170px;
+      height: 200px;
     }
 
     .main-banner h4 em {
@@ -2141,11 +2172,11 @@ CONTENIDO
       font-size: 25px;
     }
   .row .circle{
-    margin-top: -14vw;
+    margin-top: -12vw;
     margin-left: -30vw;
   }
   .circle img{
-    height: 30vw; 
+    height: 28vw; 
   }
   }
 
@@ -2170,12 +2201,12 @@ CONTENIDO
       }
 
       .row .circle{
-        margin-top: -17vw;
+        margin-top: -15vw;
         margin-left: -30vw;
       }
 
       .circle img{
-        height: 32vw; 
+        height: 27vw; 
       }
 
       .main-button a {
@@ -2192,14 +2223,24 @@ CONTENIDO
     }
   
   }
+/*APARTE SOLO PARA MODIFICAR EL mobile*/
+  @media (max-width: 607px) {
+    .row .circle{
+      margin-top: -17vw;
+      margin-left: -25vw;
+    }
 
+    .circle img{
+      height: 33vw; 
+    }
+  }
 
     /*  SEARCH, BANER TITULO Y CIRCULO*/
    @media (max-width: 488px){
     #lupa2{display: none;}
       #buscar2{display: none;}
 
-      .main-banner{height: 120px;}
+      .main-banner{height: 110px;}
 
       .main-banner h4 {
         font-size: 17px;
@@ -2214,20 +2255,32 @@ CONTENIDO
         margin-bottom: 25px;}
   
         .row .circle{
-         margin-top: -23vw;
-          margin-left: -26vw;
+         margin-top: -21vw;
+          margin-left: -20vw;
         }
         .circle img{
-          height: 33vw; 
+          height: 30vw; 
         }
         .main-button a{
           margin-bottom:5px;
           font-size: 10px;
            margin-left: -70px;}
-
-
     }
   
+/*APARTE SOLO PARA MODIFICAR EL mobile*/
+@media (max-width: 450px) {
+  .main-banner{height: 100px;}
+  .row .circle{
+    margin-top: -25vw;
+    margin-left: -20vw;
+  }
+
+  .circle img{
+    height: 33vw; 
+  }
+}
+
+
   /*MEDIDA MAS PEQUEÑA*/
   @media (max-width: 320px) {
     .main-banner{height: 80px;}
@@ -2235,31 +2288,117 @@ CONTENIDO
     .main-banner h4 {
       font-size: 15px;
       margin-top: -70px;
-      /*
-      margin-left: -50px;
-     
-      
-      line-height: 16px;*/
-
     }
     .main-banner h4 em {
       font-size: 10px;
       margin-bottom: 5px;
     }
-
-
     .row .circle{
       margin-top: -30vw;
       margin-left: -50px;
     }
-
     .circle img{
       height: 40vw; 
     }
-
-
-
   }
 
-
+  /*CARRUSEL DE CATEGORÍAS*/
+    
+    .card{
+      
+      border: none;
+      background: #eee;
+    
+    }
+    .search {
+      width: 100%;
+          margin-bottom: auto;
+        margin-top: 20px;
+        height: 50px;
+            background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    .search-input {
+        color: white;
+        border: 0;
+        outline: 0;
+        background: none;
+        width: 0;
+        margin-top: 5px;
+        caret-color: transparent;
+        line-height: 20px;
+        transition: width 0.4s linear
+    }
+    
+    .search .search-input {
+        padding: 0 10px;
+        width: 100%;
+        caret-color: #536bf6;
+        font-size: 19px;
+        font-weight: 300;
+        color: black;
+        transition: width 0.4s linear;
+    }
+    
+    
+    .search-icon {
+            height: 34px;
+        width: 34px;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: #536bf6;
+        font-size: 10px;
+            bottom: 30px;
+            position: relative;
+            border-radius: 5px;
+    }
+    
+    .search-icon:hover{
+    
+      color: #fff !important;
+    }
+    
+    a:link {
+        text-decoration: none
+    }
+    
+    
+    
+    .card-inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+        border:none;
+        cursor: pointer;
+        transition: all 2s;
+    }
+    
+    
+    .card-inner:hover{
+    
+       transform: scale(1.1);
+    
+    }
+    
+    .mg-text span{
+    
+      font-size: 12px;
+    
+    }
+    
+    .mg-text{
+    
+      line-height: 14px;
+    }
  
