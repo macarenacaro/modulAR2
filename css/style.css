@@ -3152,53 +3152,105 @@ body .page-content {
 CATEGORIAS
 --------------------------------------------- 
 */
-.card{margin-top: -30px}
+.card{margin-top: -30px } 
 
 #categorias {
   margin-top: 20px;
-  padding: 30px;
+  padding: 10px;
   background-color: rgb(245, 245, 245);
   border-radius: 23px;
 }
 
 
-.card-inner {
-  /*CATEGORIA*/
-  border-radius: 15px;
-  padding: 0;
-  margin: 0px;
-  Position: relative;
+
+
+/*NUEVO SLIDER**/
+.container {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.slider {
+
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-inner {
+  border: solid 1 px yellow;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+  right: 0%;
+  transition: right .5s;
+  padding: 10px 0px;
+}
+
+.slider-item {
+  flex-basis: 33.33%;
+  flex-shrink: 0;
+  display: block;
+}
+@media (max-width: 768px) {
+  .slider-item {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 567px) {
+  .slider-item {
+    flex-basis: 100%;
+  }
+}
+
+.box {
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+  height: 80px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
-  width: 80px;
-  height: 100px;
-  word-wrap: break-word;
-  background-color: #fff;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-
-.card-inner:hover {
-  transform: scale(1.1);
-}
-
-.mg-text:hover{
-  text-decoration: underline;
-}
-#casillas {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-}
-
-.mg-text span {
-  font-size: 12px;
-}
-
-.mg-text {
   color: white;
-  line-height: 14px;
+  background-image: linear-gradient(45deg, black, gray);
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 15px;
+}
+
+
+.control {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  left: 5px;
+  right: 5px;
+  top: 40%;
+}
+#next,#prev {
+  outline: none;
+  background-color: transparent;
+  font-size: 30px;
+  border: 0px;
+}
+button:hover {
+  cursor: pointer;
+
+}
+#next span, #prev span {
+  background-color: rgba(255,255,255,0.2);
+  padding: 2px 10px 3px 10px;
+  border-radius: 100px;
+  color: white;
+}
+#next span {
+  padding-left: 12px;
+  padding-bottom: 5px;
+}
+#prev span {
+  padding-right: 12px;
+  padding-bottom: 5px;
+}
+h2 {
+  font-size: 18px;
 }
