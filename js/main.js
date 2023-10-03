@@ -73,10 +73,21 @@ var disgraf = document.getElementById("box1");
             // Redirecciona a una URL cuando se hace clic
             window.location.href = "https://www.google.com/";
         });
+
 var disind = document.getElementById("box2");
 
         //evento de clic al div
         disind.addEventListener("click", function() {
             // Redirecciona a una URL cuando se hace clic
             window.location.href = "/../index.html"; 
+        });
+
+
+//*PARA SELECCIONAR LOS DIV DE PROYECTOS*//
+var pop1 = document.getElementById("popu01");
+
+        // evento de clic al div
+        pop1.addEventListener("click", function() {
+            // Redirecciona a una URL cuando se hace clic
+            window.location.href = "https://www.google.com/";
         });

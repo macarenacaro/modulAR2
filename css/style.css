@@ -2573,6 +2573,7 @@ CONTENIDO
 /*SUBTITULOS*/
 h3 { 
   font-size: 2vw ;
+  color: rgb(0, 51, 102);
 }
 @media (max-width: 768px) {
   h3{
@@ -2582,6 +2583,12 @@ h3 {
 @media (max-width: 480px) {
   h3{
     font-size: 3.5vw ;
+  }
+}
+
+@media (max-width: 320px) {
+  h3{
+    font-size: 4vw ;
   }
 }
 
@@ -2863,31 +2870,39 @@ h3 {
 }
 
 
-
+/* BANER TITULO Y CIRCULO*/
 /*MEDIDA MAS PEQUEÑA*/
 @media (max-width: 320px) {
   .main-banner {
-    max-height:46vw;
+    max-height:50vw;
   }
 
+  .main-button a {
+display: none;
+  }
+
+  #categorias{
+    max-height: 35vw;
+  margin-bottom: -15px;
+  }
   .main-banner h1 {
-    font-size: 4vw;
-    margin-top: -12vw;
-    margin-left: -50px;
+    font-size: 4.6vw;
+    margin-top: -5vw;
+    margin-left: -60px;
   }
 
   .main-banner h1 em {
-    font-size: 3vw;
+    font-size: 4vw;
     text-shadow: 0.5px 0.5px 0.5px rgba(4, 42, 28, 0.208);
   }
 
   .row .circle {
     margin-top: -21vw;
-    margin-left: -20VW;
+    margin-left: -23VW;
   }
 
   .circle img {
-    height: 47vw;
+    height:52vw;
   }
 }
 
@@ -2918,9 +2933,10 @@ CATEGORIAS
 /*distancia de texto categorias al banner*/
 .card{margin-top: -20px } 
 
-#categorias {
+#categorias, .most-popular {
   margin-top: 20px;
   padding: 10px;
+  padding-bottom: 20px;
   background-color: rgb(245, 245, 245);
   border-radius: 15px;
 }
@@ -2952,8 +2968,7 @@ CATEGORIAS
   position: relative;
   right: 0%;
   transition: right .5s;
-  padding: 10px 0px;
-  
+  padding: 10px 0px; 
 }
 
 .slider-item {
@@ -2976,6 +2991,11 @@ CATEGORIAS
   margin-left: 10px;
   border-radius: 15px;
 }
+@media (max-width: 480px) {
+.box{
+  border-radius: 6px;
+}
+} 
 
 .control {
   display: flex;
@@ -3028,6 +3048,7 @@ h2 {
     right:-20px;
     top: 4vw;
  }
+
  #next span, #prev span {
   background-color: rgba(255, 255, 255, 0.784);
   padding: 5px 5px 5px 5px;
@@ -3042,3 +3063,114 @@ h2 {
     height: 40px;
   }
 }
+
+.box:hover  {
+  opacity: 0.8;
+}
+
+/* 
+---------------------------------------------
+PROYECTOS POPULARES
+--------------------------------------------- 
+*/
+/*FONDO GRIS*/
+.most-popular {
+  margin-top: 25px;
+  padding: 20px;
+}
+/*TITULO*/
+.heading-section{ margin-top: -15px;}
+
+/*FILA DE PROYECTOS*/
+ #popularesRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  right: 0%;
+  padding: 10px 0px; 
+}
+
+/*CADA PROYECTO FONDO*/
+.most-popular .item {
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 15px 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  min-width: 180px;
+}
+
+.most-popular .item:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.263);  
+}
+
+.most-popular .item img {
+  justify-content: stretch;
+  border-radius: 15px;
+}
+
+/*TITULO DE PROYECTOS*/
+.most-popular .item h4 {
+  font-size:1.5vw;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  display: inline-block;
+}
+
+/*SUBTITULO*/
+.most-popular .item span {
+  color: #666;
+  display: block;
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+.detalles{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*icono ojo y like*/
+.most-popular #popularesRow .item ul {
+  margin-top: 20px;
+}
+
+.most-popular .item ul li {
+  list-style: none;
+  text-decoration: none;
+  text-align: right;
+  color: rgb(0, 51, 102);
+  font-size:1.5vw;
+
+}
+
+/*COLOR DE ICONO LIKE*/
+.most-popular .item ul li:first-child i {
+  color: #005cbf;
+}
+/*COLOR DE ICONO VISTAS*/
+.most-popular .item ul li:last-child i {
+  color: rgb(0, 204, 153);}
+
+.most-popular .main-button {
+  text-align: center;
+  margin-bottom: -53px;
+}
+
+/*TITULO RESPONSIVE*/
+@media (max-width: 900px) {
+  .most-popular .item h4, .most-popular .item ul li {font-size: 2vw;}
+}
+@media (max-width: 600px) {
+  .most-popular .item h4, .most-popular .item ul li {font-size: 3vw;}
+}
+@media (max-width: 320px) {
+  .most-popular .item h4, .most-popular .item ul li {font-size: 4vw;}
+}
+
+
