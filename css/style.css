@@ -2740,7 +2740,7 @@ h3 {
   
   .row .circle {
     margin-top: -11.5vw;
-    margin-left: -30vw;
+    margin-left: -25vw;
   }
 
   .circle img {
@@ -2762,18 +2762,52 @@ h3 {
 
 }
 
+
+/*NO ES RESPONSIVE*/
+@media (max-width: 705px) {
+  .row .circle {
+    margin-top: -14vw;
+  }
+
+  .circle img {
+    height: 32vw;
+  }
+}
+
 /*APARTE SOLO PARA MODIFICAR EL mobile*/
 @media (max-width: 600px) {
   .main-banner {
-    max-height: 30vw;
+    max-height: 35vw;
   }
   .row .circle {
-    margin-top: -13.2vw;
+    margin-top: -13.8vw;
     margin-left: -25vw;
   }
 
   .circle img {
-    height: 33vw;
+    height: 38vw;
+  }
+
+  .main-banner h1 {
+    font-size: 4.5vw;
+  }
+
+  .main-banner h1 em {
+    font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 530px) /*NO ES RESPONSIVE*/
+{
+  .main-banner {
+    max-height: 40vw;
+  }
+  .row .circle {
+    margin-top: -15.3vw;
+  }
+
+  .circle img {
+    height: 42vw;
   }
 }
 
@@ -2788,9 +2822,8 @@ h3 {
   }
 
   .main-banner {
-    max-height:31vw;
+    max-height:41vw;
   }
-
 
   .main-banner h1 {
     text-shadow: 0.3px 0.3px 0.5px black;
@@ -2799,23 +2832,42 @@ h3 {
 
   .row .circle {
     margin-top: -13.5vw;
-    margin-left: -20vw;
+    margin-left: -26vw;
   }
 
   .circle img {
-    height: 32vw;
+    height: 44vw;
   }
 
   .main-button a {
     margin-left: -3vw;
+    max-height:6vw;
   }
 }
+
+@media (max-width: 400px) {/*NO ES RESPONSIVE*/
+  .main-banner {
+    max-height:45vw;
+  }
+  .row .circle {
+    margin-left: -20.5VW;
+    margin-top: -16.5vw;
+  }
+  .circle img {
+    height: 47vw;
+  }
+  .main-banner h1 {
+    font-size: 4.5vw;
+    margin-left: -50px;
+  }
+}
+
 
 
 /*MEDIDA MAS PEQUEÑA*/
 @media (max-width: 320px) {
   .main-banner {
-    max-height:35vw;
+    max-height:46vw;
   }
 
   .main-banner h1 {
@@ -2831,11 +2883,11 @@ h3 {
 
   .row .circle {
     margin-top: -21vw;
-    margin-left: -50px;
+    margin-left: -20VW;
   }
 
   .circle img {
-    height: 39vw;
+    height: 47vw;
   }
 }
 
