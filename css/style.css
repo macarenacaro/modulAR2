@@ -2572,17 +2572,17 @@ CONTENIDO
 /*EDICIÓN TEXTOS RESPONSIVE*/
 /*SUBTITULOS*/
 h3 { 
-  font-size: 2vw ;
+  font-size: 2.6vw ;
   color: rgb(0, 51, 102);
 }
 @media (max-width: 768px) {
   h3{
-    font-size: 2.5vw ;
+    font-size: 3vw ;
   }
 }
 @media (max-width: 480px) {
   h3{
-    font-size: 3.5vw ;
+    font-size: 4vw ;
   }
 }
 
@@ -2639,7 +2639,7 @@ h3 {
 }
 
 /***** BOTON DE BANNER*****/
-.main-button a {
+.main-button a, .maspop-button a {
   font-size: 1.5vw;
   color: #fff;
   background-color: rgb(0, 51, 102);
@@ -2654,7 +2654,7 @@ h3 {
   overflow: hidden;
 }
 
-.main-button a:hover {
+.main-button a:hover, .maspop-button a:hover {
   background-color: #fff;
   color: rgb(0, 204, 153);
 }
@@ -2754,7 +2754,7 @@ h3 {
     height: 31vw;
   }
 
-  .main-button a {
+  .main-button a{
     font-size: 2.5vw;
     background: transparent;
     text-decoration: underline;
@@ -2772,12 +2772,16 @@ h3 {
 
 /*NO ES RESPONSIVE*/
 @media (max-width: 705px) {
+
+  .main-banner {
+    max-height: 35vw;
+  }
   .row .circle {
-    margin-top: -14vw;
+    margin-top: -13vw;
   }
 
   .circle img {
-    height: 32vw;
+    height: 37vw;
   }
 }
 
@@ -2829,21 +2833,23 @@ h3 {
   }
 
   .main-banner {
-    max-height:41vw;
+    max-height:50vw;
   }
 
   .main-banner h1 {
+    
+    margin-left: -10vw;
     text-shadow: 0.3px 0.3px 0.5px black;
-    margin-top: -6vw;
+    margin-top: -2vw;
   }
 
   .row .circle {
     margin-top: -13.5vw;
-    margin-left: -26vw;
+    margin-left: -32vw;
   }
 
   .circle img {
-    height: 44vw;
+    height: 52vw;
   }
 
   .main-button a {
@@ -2854,17 +2860,17 @@ h3 {
 
 @media (max-width: 400px) {/*NO ES RESPONSIVE*/
   .main-banner {
-    max-height:45vw;
+    max-height:50vw;
   }
   .row .circle {
-    margin-left: -20.5VW;
+    margin-left: -32VW;
     margin-top: -16.5vw;
   }
   .circle img {
-    height: 47vw;
+    height: 53vw;
   }
   .main-banner h1 {
-    font-size: 4.5vw;
+    font-size: 6vw;
     margin-left: -50px;
   }
 }
@@ -3100,7 +3106,7 @@ PROYECTOS POPULARES
   padding: 15px 15px;
   border-radius: 15px;
   margin-bottom: 20px;
-  min-width: 180px;
+  min-width: 185px;
 }
 
 .most-popular .item:hover {
@@ -3157,7 +3163,7 @@ PROYECTOS POPULARES
 .most-popular .item ul li:last-child i {
   color: rgb(0, 204, 153);}
 
-.most-popular .main-button {
+.most-popular .maspop-button {
   text-align: center;
   margin-bottom: -53px;
 }
