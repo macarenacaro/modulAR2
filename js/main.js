@@ -66,6 +66,9 @@ documentElement.addEventListener('DOMContentLoaded', function() {
 
 });
 
+
+
+
 //*PARA SELECCIONAR LOS DIV DEL CARROUSEL!*//
 var disgraf = document.getElementById("box1");
 
@@ -142,3 +145,43 @@ documentElemento.addEventListener('DOMContentLoaded', function() {
   window.addEventListener("resize2", sliderMe2);
 
 });
+
+
+//*PARA VISIBILIZAR EL SQUARE BLANCO DE EMPLEO*//
+/*const box2 = document.querySelector('.box2');
+const square10 = document.getElementById('square10');
+
+box2.addEventListener('mouseover', function() {
+  square10.style.display = 'block'; // Muestra el square10
+});
+
+box2.addEventListener('mouseout', function() {
+  square10.style.display = 'none'; // Oculta el square10 cuando se retira el mouse
+});*/
+
+
+/*  MOSTRAR DETALLE DE EMPLEO EN CADA AVISO*/
+// Obtén todos los elementos con la clase "box-trigger"
+const boxTriggers = document.querySelectorAll('.box-trigger');
+
+// Recorre cada elemento y agrega eventos de mouseover y mouseout de manera dinámica
+boxTriggers.forEach((boxTrigger) => {
+  const squareId = boxTrigger.id.replace('box', 'square'); // Obtiene el ID del square correspondiente
+  const square = document.getElementById(squareId);
+
+  // Agrega evento de mouseover
+  boxTrigger.addEventListener('mouseover', function() {
+    square.style.visibility = 'visible';
+   /* square.style.display = 'block'; // Muestra el square al pasar el mouse*/
+  });
+
+  // Agrega evento de mouseout
+  boxTrigger.addEventListener('mouseout', function() {
+     square.style.visibility = 'hidden'; // Cambia la visibilidad a oculto después de un retraso    
+    });
+});
+
+
+
+
+
