@@ -3195,6 +3195,9 @@ EMPLEOS - CATEGORIAS
 .heading a{color: rgb(0, 51, 102); font-size: 1.3vw;} /*VER MAS*/
 .heading a:hover{color: rgb(0, 204, 153)}
 
+/*ALTURA DE TODO EL SLIDER*/
+.slider2{height: 420px;}
+
 .box2{
   height: 400px;
   margin-left: 3px;
@@ -3203,6 +3206,15 @@ EMPLEOS - CATEGORIAS
   flex-direction: column;
   justify-content:center;
   padding: auto;
+
+}
+
+.box2 h4{
+  padding: 5px 5px;
+  background-color: rgba(0, 51, 102, 0.311);
+  color: white;
+  text-shadow: 2px 2px 4px rgb(0, 51, 102);
+  border-radius: 5px;
 
 }
 
@@ -3229,6 +3241,7 @@ EMPLEOS - CATEGORIAS
 
 /* CUADRADO BLANCO*/
 .square{
+  visibility: hidden;
   padding-top: 10px;
 padding-left:20px;
 padding-right: 20px;
@@ -3289,7 +3302,7 @@ border-bottom-right-radius: 15px;
 
 
 .slider-item2 .masemp-button{
-  margin-top: -4.5vw;
+  margin-top: -3.5vw;
   margin-bottom: 0px;
 }
 
@@ -3298,36 +3311,3 @@ border-bottom-right-radius: 15px;
   padding: 10px;
   padding-top: 3px;
   }
-
-
-
-.live-stream .hover-effect .live a { 
-  position: absolute;
-  background-color: rgba(236, 96, 144, 0.9);
-  padding: 5px 10px;
-  border-radius: 23px;
-  color: #fff;
-  font-size: 14px;
-  right: 15px;
-  top: 15px;
-}
-
-.live-stream .hover-effect ul {
-  position: absolute;
-  bottom: 20px;
-  text-align: center;
-  width: 100%;
-}
-
-.live-stream .hover-effect ul li {
-  display: inline-block;
-  margin: 0px 5px;
-}
-
-.live-stream .hover-effect ul li a {
-  background-color: rgba(236, 96, 144, 0.9);
-  padding: 5px 10px;
-  border-radius: 23px;
-  color: #fff;
-  font-size: 14px;
-}
