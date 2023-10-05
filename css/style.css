@@ -60,6 +60,14 @@ body {
   margin-left: auto;
 }
 
+/*FONDOS GRISES GENERALES*/
+#categorias, .most-popular, #categorias2  {
+  margin-top: 30px;
+  padding: 10px;
+  padding-bottom: 20px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 15px;
+}
 
 
 
@@ -2639,7 +2647,7 @@ h3 {
 }
 
 /***** BOTON DE BANNER*****/
-.main-button a, .maspop-button a {
+.main-button a, .maspop-button a, .masemp-button a {
   font-size: 1.5vw;
   color: #fff;
   background-color: rgb(0, 51, 102);
@@ -2654,7 +2662,7 @@ h3 {
   overflow: hidden;
 }
 
-.main-button a:hover, .maspop-button a:hover {
+.main-button a:hover, .maspop-button a:hover, .masemp-button a:hover {
   background-color: #fff;
   color: rgb(0, 204, 153);
 }
@@ -2919,55 +2927,46 @@ CATEGORIAS
 */
 
 
-/*INTERIOR DE CATEGORIAS*/
+/*INTERIOR DE CATEGORIAS Y EMPLEOS*/
 /*FONT SLIDER*/
-.slider-item h4{ 
+.slider-item h4,.slider-item2 h4 { 
   font-size: 1.8vw ;
   text-shadow: 2px 2px rgb(0, 51, 102);
 }
 @media (max-width: 768px) {
-  .slider-item h4{
+  .slider-item h4,.slider-item2 h4{
     font-size: 2.5vw ;
   }
 }
 @media (max-width: 480px) {
-  .slider-item h4{
+  .slider-item h4,.slider-item2 h4{
     font-size: 2.9vw ;
   }
 }
 
 /*distancia de texto categorias al banner*/
-.card{margin-top: -20px } 
-
-#categorias, .most-popular {
-  margin-top: 20px;
-  padding: 10px;
-  padding-bottom: 20px;
-  background-color: rgb(245, 245, 245);
-  border-radius: 15px;
-}
-
+.card, .card2{margin-top: -20px } 
 
 
 @media (max-width: 480px) {
-  .card{margin-top: -4vw } 
-  #categorias{margin-top: 2vw;}
+  .card, .card2{margin-top: -4vw } 
+  #categorias, #categorias2{margin-top: 2vw;}
 } 
 
 
 /*NUEVO SLIDER**/
-.container {
+.container,.container2 {
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
-.slider {
+.slider, .slider2 {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-.slider-inner {
+.slider-inner, .slider-inner2 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -2977,33 +2976,32 @@ CATEGORIAS
   padding: 10px 0px; 
 }
 
-.slider-item {
+.slider-item, .slider-item2 {
   flex-basis:25%;
   flex-shrink: 0;
   display: block;
 }
 
-.box {
+.box, .box2 {
   box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
-  height: 80px;
+  height: 130px;
   display: flex;
   text-align: center;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   color: white;
-  background-image: linear-gradient(45deg, black, gray);
   margin-right: 10px;
   margin-left: 10px;
   border-radius: 15px;
 }
 @media (max-width: 480px) {
-.box{
+.box, box2{
   border-radius: 6px;
 }
 } 
 
-.control {
+.control, .control2 {
   display: flex;
   position: absolute;
   justify-content: space-between;
@@ -3011,7 +3009,7 @@ CATEGORIAS
   right: 5px;
   top: 40%;
 }
-#next,#prev {
+#next,#prev,#next2,#prev2 {
   outline: none;
   background-color: transparent;
   font-size: 30px;
@@ -3021,17 +3019,17 @@ button:hover {
   cursor: pointer;
 
 }
-#next span, #prev span {
+#next span, #prev span,#next2 span, #prev2 span {
   background-color: rgba(255,255,255,0.2);
   padding: 2px 10px 3px 10px;
   border-radius: 100px;
   color: white;
 }
-#next span {
+#next span,#next2 span {
   padding-left: 12px;
   padding-bottom: 5px;
 }
-#prev span {
+#prev span,#prev2 span {
   padding-right: 12px;
   padding-bottom: 5px;
 }
@@ -3040,7 +3038,7 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  .slider-item {
+  .slider-item,.slider-item2 {
     flex-basis: 33%;
   }
   .box{
@@ -3049,19 +3047,19 @@ h2 {
 }
 
 @media (max-width: 320px) {
-  .control {
+  .control,.control2 {
     left:-20px;
     right:-20px;
     top: 4vw;
  }
 
- #next span, #prev span {
+ #next span, #prev span,#next2 span, #prev2 span {
   background-color: rgba(255, 255, 255, 0.784);
   padding: 5px 5px 5px 5px;
   border-radius: 100px;
   color: rgb(0, 51, 102);
 }
-  .slider-item {
+  .slider-item, .slider-item2{
     height: 80px;
     flex-basis: 50%;
   }
@@ -3080,7 +3078,7 @@ PROYECTOS POPULARES
 --------------------------------------------- 
 */
 /*FONDO GRIS*/
-.most-popular {
+.most-popular{
   margin-top: 25px;
   padding: 20px;
 }
@@ -3163,20 +3161,84 @@ PROYECTOS POPULARES
 .most-popular .item ul li:last-child i {
   color: rgb(0, 204, 153);}
 
-.most-popular .maspop-button {
+.most-popular .maspop-button, #categorias2 .masemp-button {
   text-align: center;
   margin-bottom: -53px;
 }
 
 /*TITULO RESPONSIVE*/
 @media (max-width: 900px) {
-  .most-popular .item h4, .most-popular .item ul li {font-size: 2vw;}
+  .most-popular .item h4, .most-popular .item ul li, .most-popular .maspop-button a {font-size: 2.5vw;}
 }
 @media (max-width: 600px) {
-  .most-popular .item h4, .most-popular .item ul li {font-size: 3vw;}
+  .most-popular .item h4, .most-popular .item ul li, .most-popular .maspop-button a {font-size: 3.2vw;}
 }
 @media (max-width: 320px) {
-  .most-popular .item h4, .most-popular .item ul li {font-size: 4vw;}
+  .most-popular .item h4, .most-popular .item ul li, .most-popular .maspop-button a {font-size: 4vw;}
 }
 
 
+/* 
+---------------------------------------------
+EMPLEOS - CATEGORIAS
+--------------------------------------------- 
+*/
+/*Modificaciones particulares del box*/
+.box2{
+  height: 200px;
+}
+
+/*.hover-effect{
+  display: none;
+}*/
+/*
+#box10:hover {
+
+  opacity: 1;
+  visibility: visible;
+}*/
+
+.slider-item2 .box2:hover .hover-effect {
+  border: solid 3px red;
+  opacity: 0;
+  visibility: visible;
+  transition: all .3s;
+}
+
+.slider-inner2 .slider-item2:hover h4 {
+  border: solid 3px red;
+  opacity: 0;
+  visibility: visible;
+  transition: all .3s;
+}
+
+.live-stream .hover-effect .live a { 
+  position: absolute;
+  background-color: rgba(236, 96, 144, 0.9);
+  padding: 5px 10px;
+  border-radius: 23px;
+  color: #fff;
+  font-size: 14px;
+  right: 15px;
+  top: 15px;
+}
+
+.live-stream .hover-effect ul {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.live-stream .hover-effect ul li {
+  display: inline-block;
+  margin: 0px 5px;
+}
+
+.live-stream .hover-effect ul li a {
+  background-color: rgba(236, 96, 144, 0.9);
+  padding: 5px 10px;
+  border-radius: 23px;
+  color: #fff;
+  font-size: 14px;
+}
