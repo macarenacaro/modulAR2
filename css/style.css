@@ -2585,7 +2585,7 @@ h3 {
 }
 @media (max-width: 768px) {
   h3{
-    font-size: 3vw ;
+    font-size: 3.5vw ;
   }
 }
 @media (max-width: 480px) {
@@ -2945,11 +2945,11 @@ CATEGORIAS
 }
 
 /*distancia de texto categorias al banner*/
-.card, .card2{margin-top: -20px } 
+.card{margin-top: -20px } 
 
 
 @media (max-width: 480px) {
-  .card, .card2{margin-top: -4vw } 
+  .card{margin-top: -4vw } 
   #categorias, #categorias2{margin-top: 2vw;}
 } 
 
@@ -3182,12 +3182,68 @@ PROYECTOS POPULARES
 ---------------------------------------------
 EMPLEOS - CATEGORIAS
 --------------------------------------------- 
-*/
-/*Modificaciones particulares del box*/
+
+/*distancia de texto categorias al banner*/
+.card2{margin-top: -20px; /*ESTO ES STANDARD EN TODAS*/} 
+@media (max-width: 480px) {
+  .card2{margin-top: -4vw } 
+  } 
+
+/*TEXTO TITULO DE CATEGORIA DE EMPLEO + "VERMAS"*/
+.heading{display: flex; justify-content: space-between; align-items: baseline; margin-bottom: -20px;margin-top: -4vw} 
+.heading h3{color: rgb(0, 204, 153);}
+.heading a{color: rgb(0, 51, 102); font-size: 1.3vw;} /*VER MAS*/
+.heading a:hover{color: rgb(0, 204, 153)}
+
 .box2{
-  height: 200px;
+  height: 400px;
+  margin-left: 3px;
+  margin-right:3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  padding: auto;
+}
+/* CUADRADO BLANCO*/
+.square{
+padding: 5px 20px;
+display: flex;
+flex-direction: row;
+
+opacity: 0%; /*cambiar a 0*/
+width:100%;
+height:100%;
+color:rgb(0, 51, 102);
+background:white;
+margin-bottom:0px;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;}
+
+.square:hover{
+  opacity: 80%;
+  transition: all .3s;
 }
 
+#descripcion h5{
+  opacity: 100%;
+  font-size: 1.5vw;
+}
+
+/*OPACIDAD DE TEXTO DE INFORMACIÓN*/
+/*.square .hover-effect h6 {
+margin-bottom: -5px;
+  opacity: 100%;
+}*/
+
+/*.slider-item2 .box2:hover .hover-effect {
+  opacity: 100;
+  visibility: visible;
+  transition: all .3s;
+}*/
+
+.box2:hover{
+/*opacity: 50%;*/
+}
 /*.hover-effect{
   display: none;
 }*/
@@ -3198,19 +3254,8 @@ EMPLEOS - CATEGORIAS
   visibility: visible;
 }*/
 
-.slider-item2 .box2:hover .hover-effect {
-  border: solid 3px red;
-  opacity: 0;
-  visibility: visible;
-  transition: all .3s;
-}
 
-.slider-inner2 .slider-item2:hover h4 {
-  border: solid 3px red;
-  opacity: 0;
-  visibility: visible;
-  transition: all .3s;
-}
+
 
 .live-stream .hover-effect .live a { 
   position: absolute;
