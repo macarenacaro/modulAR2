@@ -3198,6 +3198,21 @@ EMPLEOS - CATEGORIAS
 /*ALTURA DE TODO EL SLIDER*/
 .slider2{height: 420px;}
 
+@media (max-width: 990px) {
+.slider-inner2 .slider-item2 .box2{width: 36.3vw; margin-left: 2.5vw;}}
+@media (max-width: 902px) {
+  .slider-inner2 .slider-item2 .box2{ margin-left: 1.7vw;}}
+
+@media (max-width: 757px) {
+  .slider-inner2 .slider-item2 .box2{width: 35vw;margin-left: 1.7vw;}}
+
+  @media (max-width: 618px) {
+    .slider-inner2 .slider-item2 .box2{width: 33vw;margin-left: 1.9vw;}}
+
+    @media (max-width: 565px) {
+      .slider-inner2 .slider-item2 .box2{width: 75vw; height: 300px;margin-left: 1.9vw;}}
+
+
 .box2{
   height: 400px;
   margin-left: 3px;
