@@ -119,7 +119,7 @@ NAVBAR
 
 /*SEARCH*/
 #buscar,
-#buscar2 {
+#buscar2, .subscribe-form-wrap form input {
   font-family: 'GalanoLight';
   background-color: transparent;
   border: solid 1px #bebebe;
@@ -3350,6 +3350,8 @@ text-align: center;
 }
 
 .site-footer .container .row {
+  padding-left:30px;
+  padding-right:30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -3361,36 +3363,78 @@ text-align: center;
  padding-top: -50px;
 width: 50%;
 }
-.site-footer-title,
-.site-footer p {
-  color: var(--white-color);
+
+
+.site-footer h7{
+  font-size: 1.2vw;
+  color: rgb(0, 204, 153);
 }
 
-.site-footer p strong {
-  font-family: var(--title-font-family);
+.site-footer h8{
+  font-size: 1vw;
 }
 
-.site-footer p a {
-  color: var(--white-color);
-  border-bottom: 1px solid;
-  padding-bottom: 3px;
+/*SUSCRIBETE*/
+.subscribe-form-wrap form{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
 }
 
-.site-footer p a:hover {
-  color: var(--secondary-color);
+/*BARRA_EL DISEÑO ESTÁ CON BUSCAR*/
+.subscribe-form-wrap form input{
+  margin-top: 5px; 
 }
 
-.site-footer-thumb a img {
-  display: block;
-  width: 120px;
-  min-width: 120px;
+/*BOTON DE SUBSCRIBIR*/
+.custom-form div .form-control{
+  font-size: 1vw;
+  background:rgb(0, 204, 153);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 4px;
+}
+
+.custom-form div .form-control:hover {
+  background: rgb(0, 51, 102);
+  color: white;
+}
+
+
+#contacto{
+  margin-top: 20px;
+}
+
+#descarga{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*DESCARGAS DE APP*/
+#logos{margin-left:4vw ;
+  
+  display:flex;flex-direction: row; justify-content: center}
+
+#logos a img {margin-top:10px;
+  width:9vw;
   height: auto;
 }
 
+.site-footer{padding-bottom: 30px;}
+
+/*Texto inferior*/
 .site-footer-links {
+  font-size: 1.2vw;
+  color: white;
   margin-bottom: 0;
   padding-left: 0;
 }
+.site-footer-link-item:hover {
+color: rgb(0, 204, 153);
+}
+
 
 .site-footer-link-item {
   display: inline-block;
@@ -3443,40 +3487,91 @@ width: 50%;
 /*---------------------------------------
   RESPONSIVE STYLES               
 -----------------------------------------*/
-
-@media screen and (min-width: 1600px) {
-  .site-footer {
-    padding-top: 250px;
-  }
-
-  .section-padding {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
+@media (max-width: 1024px) {
   
-  .site-footer {
-    margin-top: -200px;
-    padding-top: 200px;
-    padding-bottom: 100px;
+.site-footer h7{
+  font-size: 1.7vw;}
+
+.site-footer h8{
+  font-size: 1.4vw;}
+.site-footer-links {
+  font-size: 1.3vw;}
+
+  .subscribe-form-wrap form input{
+   width: 18vw;
+  }  
+}
+
+@media (max-width: 880px) {
+  
+  .site-footer h7{
+    font-size: 2.1vw;}
+  
+  .site-footer h8{
+    font-size: 1.8vw;}
+  .site-footer-links {
+    font-size: 1.8vw;}
+  
+    .subscribe-form-wrap form input{
+     width: 18vw;
+    }  
+
+    .custom-form div .form-control{
+      font-size: 1.5vw;}
   }
-}
-
-@media screen and (max-width: 414px) {
-  .search-form {
-    max-width: 200px;
-  }
-
-}
-
-#descarga{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#logos{display: flex;flex-direction: row;}
 
 
-.site-footer{padding-bottom: 30px;}
+  @media (max-width: 576px) {
+
+.site-footer .row{display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+    .subscribe-form-wrap {
+      margin: auto;
+      margin-bottom: -20px;
+     }
+
+     #contacto{
+      line-height: 3vw;
+     }
+    .subscribe-form-wrap h7,.subscribe-form-wrap form, #descarga {
+     display: none;
+    }
+  
+    .site-footer h7{
+      font-size: 2.8vw;}
+    
+    .site-footer h8{
+      font-size: 2.1vw;}
+
+    .site-footer-links {
+      font-size: 2.1vw;}
+  
+    }
+
+    @media (max-width: 460px) {
+           .subscribe-form-wrap {
+          margin: auto;
+          margin-left: 8vw;
+          margin-bottom: -20px;
+         }
+            
+#contacto h7{
+          font-size: 4vw;
+          line-height: 7vw;}
+        
+        .site-footer h8{
+          font-size: 3.5vw;}
+    
+          .site-footer-links {
+            font-size: 3.5vw;
+            margin-bottom: -5px;
+
+         }
+
+        .site-footer-link-item {
+          margin: 5px;
+          font-size: 3vw;
+       }
+    }
