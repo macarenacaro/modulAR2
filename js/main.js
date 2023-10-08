@@ -130,7 +130,7 @@ documentElemento.addEventListener('DOMContentLoaded', function() {
         }
       },
       // Reducir el valor aquí para un desplazamiento mayor
-      limitPosition2 = sliderItemWidth2 * (sliderItem2.length - Math.floor(400 /sliderItemWidth2));
+      limitPosition2 = sliderItemWidth2 * (sliderItem2.length - Math.floor(100 /sliderItemWidth2));
 
     control2.next2.addEventListener('click', control2.slideNext2);
     control2.prev2.addEventListener('click', control2.slidePrev2);
@@ -147,17 +147,55 @@ documentElemento.addEventListener('DOMContentLoaded', function() {
 });
 
 
-//*PARA VISIBILIZAR EL SQUARE BLANCO DE EMPLEO*//
-/*const box2 = document.querySelector('.box2');
-const square10 = document.getElementById('square10');
+/* SEGUNDO CARRUSEL DE EMPLEO*/
+var documentoElemento = document;
 
-box2.addEventListener('mouseover', function() {
-  square10.style.display = 'block'; // Muestra el square10
+documentoElemento.addEventListener('DOMContentLoaded', function() {
+
+  const sliderMe3 = () => {
+    let currentPosition3 = 0,
+      sliderItem3 = documentoElemento.querySelectorAll('.slider-item3'),
+      sliderItemWidth3 = window.getComputedStyle(sliderItem3[0]).flexBasis.match(/\d+\.?\d+/g),
+      sliderInner3 = documentoElemento.querySelector('.slider-inner3'),
+     
+      control3 = {
+        next3: documentoElemento.querySelector('#next3'),
+        slideNext3() {
+          currentPosition3 += parseFloat(sliderItemWidth3);
+          if (currentPosition3 > limitPosition3) {
+            currentPosition3 = 0;
+          }
+          sliderInner3.style.right = currentPosition3 + '%'; 
+        },
+        prev3: documentoElemento.querySelector('#prev3'),
+       
+		slidePrev3() {
+          currentPosition3 -= parseFloat(sliderItemWidth3);
+          if (currentPosition3 < 0) {
+            currentPosition3 = limitPosition3;
+          }
+          sliderInner3.style.right = currentPosition3 + '%'; 
+        }
+      },
+      // Reducir el valor aquí para un desplazamiento mayor
+      limitPosition3 = sliderItemWidth3 * (sliderItem3.length - Math.floor(100 /sliderItemWidth3));
+
+    control3.next3.addEventListener('click', control3.slideNext3);
+    control3.prev3.addEventListener('click', control3.slidePrev3);
+
+    window.addEventListener("resize3", function() {
+      currentPosition3 = 0;
+      documentoElemento.querySelector('.slider-inner3').style.right = currentPosition3 + '%';
+    });
+  }
+  sliderMe3();
+
+  window.addEventListener("resize3", sliderMe3);
+
 });
 
-box2.addEventListener('mouseout', function() {
-  square10.style.display = 'none'; // Oculta el square10 cuando se retira el mouse
-});*/
+
+
 
 
 /*  MOSTRAR DETALLE DE EMPLEO EN CADA AVISO*/
