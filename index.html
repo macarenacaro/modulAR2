@@ -24,7 +24,7 @@
 					<form class="form-inline d-flex md-form form-sm mt-0">
 						<input id="buscar2" class="form-control form-control-sm ml-3 w-75" type="text"
 							placeholder="Buscar.." aria-label="Buscar" " >
-					  <a id=" lupa2" href="#" class="search-icon"> <i class="fa fa-search"></i>
+					  <a id="lupa2" href="#" class="search-icon"> <i class="fa fa-search"></i>
 						</a>
 					</form>
 					<!--NAVEGADOR DE CARRITO, NOTIFICACIONES, ETC-->
@@ -36,17 +36,40 @@
 									class="fa fa-envelope"><i class="sr-only">Mensajes</i></span></a>
 							<a href="#" class="d-flex align-items-center justify-content-center"><span
 									class="fa fa-shopping-bag"><i class="sr-only">Compras</i></span></a>
-							<a href="#" class="d-flex align-items-center justify-content-center"><span
-									class="fa fa-user"><i class="sr-only">Cuenta</i></span></a>
+							<a href="#" class="d-flex align-items-center justify-content-center">
+								<span class="fa fa-user"><i class="sr-only">Cuenta</i></span>
+							</a>
+							<a id="portrait" class="btn btn-secondary dropdown-toggle"  data-toggle="collapse" data-target="#cuenta"
+							aria-controls="cuenta" style="background-image: url(images/portrait.svg); background-size: cover;">
+								<span  class=""><i class="sr-only">Cuenta</i></span>
+							</a>									
+							<!-- DROPDOWN PARA CUENTA -->
+							<div class="collapse navbar-collapse" id="cuenta" >
+								Cuenta
+								<ul class="dropdown-menu dropdown-menu-lg-end">
+									<li><a class="dropdown-item" href="index.html" >Mi Cuenta</a></li>
+									<li><a class="dropdown-item" href="#" >Perfil modulAR</a></li>
+									<li><a class="dropdown-item" href="#" >Idioma</a></li>
+									<li><a class="dropdown-item" href="#">Ajustes</a></li>
+									<li><a class="dropdown-item" href="#">Ayuda</a></li>
+
+								</ul>
+							</div>	
+
+							
 						</p>
+						
+						
 					</div>
 
-
+					
+ 
+					                   
+					<!-- BOTON DE MENU DE NAVEGACION-->
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
 						aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="fa fa-bars"></span>
 					</button>
-
 
 					<div class="collapse navbar-collapse" id="ftco-nav">
 						<ul class="navbar-nav ml-auto mr-md-3">
@@ -57,22 +80,31 @@
 
 						</ul>
 					</div>
+
+
+
+
 					<!--SEARCH-->
 					<form class="form-inline d-flex md-form form-sm mt-0">
 						<input id="buscar" class="form-control form-control-sm ml-3 w-75" type="text"
 							placeholder="Buscar.." aria-label="Buscar" " >
-					  <a id=" lupa" href="#" class="search-icon"> <i class="fa fa-search"></i>
+					  <a id="lupa" href="#" class="search-icon"> <i class="fa fa-search"></i>
 						</a>
 					</form>
 				</div>
+			
 			</nav>
+			
 		</div>
+
+		
 	</section>
 	<!-- END nav -->
 
 
 	<!-- Inicio CONTENIDO -->
 	<div class="contenedor">
+		
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="page-content">
