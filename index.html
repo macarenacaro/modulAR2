@@ -49,22 +49,22 @@
 						
 
 							<!--MENSAJES-->
-							<a id="iconmen" data-toggle="collapse" data-target="#mensj" aria-controls="mensj"
+							<a id="mensajes" data-toggle="collapse" data-target="#mensColl" aria-controls="mensColl"
 							class="d-flex align-items-center justify-content-center" style="background-image: url(images/mensaje.svg); background-size: cover;">
 							<!--	<span><i class="sr-only"></i></span>-->
 							</a>
 
 
 							<!--COMPRAS-->
-							<a id="iconshop" data-toggle="collapse" data-target="#shop" aria-controls="shop"
+							<a id="compras" data-toggle="collapse" data-target="#shopColl" aria-controls="shopColl"
 							class="d-flex align-items-center justify-content-center" style="background-image: url(images/shop.svg); background-size: cover;">
 							<!--	<span><i class="sr-only"></i></span>-->
 							</a>							
 
 
-							<!--CUENTA DE USUARIO NO REGISTRADO-->
-							<a id="iconusu" class="btn btn-secondary dropdown-toggle"  data-toggle="collapse" data-target="#usuario"
-							aria-controls="usuario" style="background-image: url(images/usuario_1.svg); background-size: cover;">
+							<!--CUENTA DE USUARIO LOGIN-->
+							<a id="login" class="btn btn-secondary dropdown-toggle"  data-toggle="collapse" data-target="#loginColl"
+							aria-controls="loginColl" style="background-image: url(images/usuario_1.svg); background-size: cover;">
 							<!--	<span><i class="sr-only"></i></span>-->
 							</a>	
 
@@ -76,17 +76,73 @@
 
 							
  							<!-- BOTON DE MENU DE NAVEGACION-->
-							 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-nav"
+							 <button id="boton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-nav"
 							 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 							 <span class="fa fa-bars"></span>
 								 </button>
 
 
 							<!-- ************SECCIOÓN DROPDOWN************ -->
+
+
+							<!-- Collaspse PARA NOTIFICACIONES -->
+							<div class="collapse navbar-collapse" id="notif" >
+								Notificaciones
+								<ul class="navbar-nav ml-auto mr-md-3">
+									<li><a class="dropdown-item" href="index.html" >No tienes Notificaciones</a></li>
+		
+								</ul>
+							</div>				
 							
-							<!-- DROPDOWN PARA CUENTA -->
+							<!-- Collaspse PARA MENSAJES -->
+							<div class="collapse navbar-collapse" id="mensColl" >
+								Mensajes
+								<ul class="navbar-nav ml-auto mr-md-3">
+									<li><a class="dropdown-item" href="index.html" >No tienes Mensajes</a></li>
+		
+								</ul>
+							</div>								
+
+							<!-- DROPDOWN PARA CARRITO -->
+							<div class="collapse navbar-collapse" id="shopColl">
+								Compras
+								<ul class="dropdown-menu dropdown-menu-lg-end">
+									<li><a class="dropdown-item" href="index.html" >Mis Compras</a></li>
+									<li><a class="dropdown-item" href="#" >Moneda</a></li>
+									<li><a class="dropdown-item" href="#">Lista Favoritos</a></li>
+									<li><a class="dropdown-item" href="#">Ajustes</a></li>
+
+								</ul>
+							</div>	
+
+							<!-- DROPDOWN PARA LOGIN -->
+							<div class="collapse navbar-collapse" id="loginColl">
+								Inicia Sesión 
+								<ul class="dropdown-menu dropdown-menu-lg-end">
+									<li><a class="dropdown-item">Nombre o Usuario</a></li>
+									<li>
+										<form class="form-inline d-flex md-form form-sm mt-0">
+											<input id="usuario" class="form-control form-control-sm ml-3 w-75" type="text" >
+										</form>
+									</li>
+									<li><a class="dropdown-item">Contraseña</a></li>
+									<li>
+										<form class="form-inline d-flex md-form form-sm mt-0">
+											<input id="contrasena" class="form-control form-control-sm ml-3 w-75" type="text" >
+										</form>
+									</li>
+									<li><a class="dropdown-item" href="#" style="font-size: 10px;">¿Has olvidado tu contraseña?</a></li>
+								</ul>
+								<button class="navButton">Iniciar Sesion</button>
+							</div>	
+								
+							
+
+
+
+							<!-- DROPDOWN PARA SESION INICIADA -->
 							<div class="collapse navbar-collapse" id="cuenta">
-								Cuenta
+								¡Bienvenid@ a modulAR!
 								<ul class="dropdown-menu dropdown-menu-lg-end">
 									<li><a class="dropdown-item" href="index.html" >Mi Cuenta</a></li>
 									<li><a class="dropdown-item" href="#" >Perfil modulAR</a></li>
@@ -95,15 +151,11 @@
 									<li><a class="dropdown-item" href="#">Ayuda</a></li>
 
 								</ul>
+								<button class="navButton">Cerrar Sesion</button>
 							</div>	
-							<!-- DROPDOWN PARA NOTIFICACIONES -->
-					<div class="collapse navbar-collapse" id="notif" >
-						Notificaciones
-						<ul class="navbar-nav ml-auto mr-md-3">
-							<li><a class="nav-item" href="index.html" >No tienes Notificaciones</a></li>
 
-						</ul>
-					</div>	
+
+
 							<!-- DROPDOWN PARA MENU -->
 					<div class="collapse navbar-collapse" id="menu-nav">
 						<ul class="navbar-nav ml-auto mr-md-3">
@@ -1256,8 +1308,7 @@
 		<!--PARA QUE BAJE EL NAVBAR MENU-->
 		<!--<script src="js/popper.js"></script>-->
 		<!-- PARA QUE BAJE EL NAVBAR MENU-->
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
 
 </body>

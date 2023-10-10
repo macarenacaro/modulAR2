@@ -1,38 +1,70 @@
 //*NAVBAR*//
 document.addEventListener("DOMContentLoaded", function () {
 
-  var collapses = document.querySelectorAll(".collapse");
-
-  var port = document.getElementById("portrait");
+  /*SELECCIONAMOS TODOS LOS BOTONES DEL NAVBAR (ICONOS)*/
   var notif = document.getElementById("notificaciones");
+  var mensj = document.getElementById("mensajes");
+  var shop = document.getElementById("compras");
+  var iniciar = document.getElementById("login");
+  var port = document.getElementById("portrait"); //cuando el usuario ya inició sesión
+  var menu = document.getElementById("boton"); // menu que sólo aparece en formatos pequeños
 
-  /*port.disabled = true;*/
+
+  /*CREAMOS CONTADOR GENERAL QUE VUELVE SIEMPRE A 0*/
 var contador = 0;
 
-/* CUANDO ABRO EL TOOGLER DE USUARIO SE DESACTIVAN LOS OTROS BOTONES*/
+
+/* CUANDO ABRO EL COLLAPSE DE USUARIO SE DESACTIVAN LOS OTROS BOTONES*/
+/* ACCIÓN PARA ICONO DE NOTIFICACIONES*/
+notif.onclick = function () {
+  if(notif.disabled != true){
+
+    port.disabled = true; /*cuando hago clic desactivo el resto*/
+    mensj.disabled = true;
+    shop.disabled = true;
+    iniciar.disabled = true;
+    menu.disabled = true;
+
+  contador++;
+
+  //* luego de hacer doble click que reactivan todos*/
+  if (contador%2==0){
+    port.disabled = false; /*cuando hago clic desactivo el resto*/
+    mensj.disabled = false;
+    shop.disabled = false;
+    iniciar.disabled = false;
+    menu.disabled = false;
+
+    contador = 0;
+  }
+}
+
+
+
+/* ACCIÓN PARA ICONO DE USUARIOS REGISTRADOS*/
   port.onclick = function () {
     if(port.disabled != true){
+
     notif.disabled = true; /*cuando hago clic desactivo el resto*/
+    mensj.disabled = true;
+    shop.disabled = true;
+    iniciar.disabled = true;
+    menu.disabled = true;
     contador++;
 
     //* luego de hacer doble click que reactivan todos*/
     if (contador%2==0){
-      notif.disabled = false;
+      notif.disabled = false; /*cuando hago clic desactivo el resto*/
+    mensj.disabled = false;
+    shop.disabled = false;
+    iniciar.disabled = false;
+    menu.disabled = false;
       contador = 0;
     }
     }}
 
-    notif.onclick = function () {
-      if(notif.disabled != true){
-      port.disabled = true; /*cuando hago clic desactivo el resto*/
-      contador++;
-  
-      //* luego de hacer doble click que reactivan todos*/
-      if (contador%2==0){
-        port.disabled = false;
-        contador = 0;
-      }
-    }
+
+
       }
 
   // evento de clic al div/*
