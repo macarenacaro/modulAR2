@@ -38,8 +38,83 @@ notif.onclick = function () {
     contador = 0;
   }
 }
+}
 
 
+/* ACCIÓN PARA ICONO DE MENSAJES*/
+mensj.onclick = function () {
+  if(mensj.disabled != true){
+
+    port.disabled = true; /*cuando hago clic desactivo el resto*/
+    notif.disabled = true;
+    shop.disabled = true;
+    iniciar.disabled = true;
+    menu.disabled = true;
+
+  contador++;
+
+  //* luego de hacer doble click que reactivan todos*/
+  if (contador%2==0){
+    port.disabled = false; /*cuando hago clic desactivo el resto*/
+    notif.disabled = false;
+    shop.disabled = false;
+    iniciar.disabled = false;
+    menu.disabled = false;
+
+    contador = 0;
+  }
+}
+}
+
+/* ACCIÓN PARA ICONO DE COMPRAS*/
+shop.onclick = function () {
+  if(shop.disabled != true){
+
+    port.disabled = true; /*cuando hago clic desactivo el resto*/
+    mensj.disabled = true;
+    notif.disabled = true;
+    iniciar.disabled = true;
+    menu.disabled = true;
+
+  contador++;
+
+  //* luego de hacer doble click que reactivan todos*/
+  if (contador%2==0){
+    port.disabled = false; /*cuando hago clic desactivo el resto*/
+    mensj.disabled = false;
+    notif.disabled = false;
+    iniciar.disabled = false;
+    menu.disabled = false;
+
+    contador = 0;
+  }
+}
+}
+
+/* ACCIÓN PARA ICONO DE LOGIN, PARA INICIAR SESION*/
+iniciar.onclick = function () {
+  if(iniciar.disabled != true){
+
+    port.disabled = true; /*cuando hago clic desactivo el resto*/
+    mensj.disabled = true;
+    shop.disabled = true;
+    notif.disabled = true;
+    menu.disabled = true;
+
+  contador++;
+
+  //* luego de hacer doble click que reactivan todos*/
+  if (contador%2==0){
+    port.disabled = false; /*cuando hago clic desactivo el resto*/
+    mensj.disabled = false;
+    shop.disabled = false;
+    notif.disabled = false;
+    menu.disabled = false;
+
+    contador = 0;
+  }
+}
+}
 
 /* ACCIÓN PARA ICONO DE USUARIOS REGISTRADOS*/
   port.onclick = function () {
@@ -61,30 +136,36 @@ notif.onclick = function () {
     menu.disabled = false;
       contador = 0;
     }
-    }}
+    }
+  }
+  
+  /* ACCIÓN PARA MENU DESPLEGABLE EN DISPOSITIVOS*/
+  menu.onclick = function () {
+  if(menu.disabled != true){
+
+    port.disabled = true; /*cuando hago clic desactivo el resto*/
+    mensj.disabled = true;
+    shop.disabled = true;
+    iniciar.disabled = true;
+    notif.disabled = true;
+
+  contador++;
+
+  //* luego de hacer doble click que reactivan todos*/
+  if (contador%2==0){
+    port.disabled = false; /*cuando hago clic desactivo el resto*/
+    mensj.disabled = false;
+    shop.disabled = false;
+    iniciar.disabled = false;
+    notif.disabled = false;
+
+    contador = 0;
+  }
+}
+}
 
 
-
-      }
-
-  // evento de clic al div/*
-  /*port.addEventListener("click", function () {
-
-    contador=+ 1;
-    alert(contador);
-
-
-
-
-
-    /* collapses.forEach(function (collapse) {
-       collapse.classList.add("show");*/
-    /*
-    collapse.classList.toggle("show");*/
-
-    /*collapses.forEach(function (collapse) {
-            collapse.classList.remove("show");
-  });*/
+     
 });
 
 
