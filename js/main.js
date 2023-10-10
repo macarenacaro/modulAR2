@@ -1,39 +1,81 @@
+//*NAVBAR*//
+document.addEventListener("DOMContentLoaded", function () {
 
-/*evento dropdown menu*/
-/*(function($) {
+  var collapses = document.querySelectorAll(".collapse");
 
-	"use strict";
+  var port = document.getElementById("portrait");
+  var notif = document.getElementById("notificaciones");
 
-	$('nav .dropdown').hover(function(){
-		var $this = $(this);
-		$this.addClass('show');
-		$this.find('> a').attr('aria-expanded', true);
-		$this.find('.dropdown-menu').addClass('show');
-	}, function(){
-		var $this = $(this);
-			$this.removeClass('show');
-			$this.find('> a').attr('aria-expanded', false);
-			$this.find('.dropdown-menu').removeClass('show');
-	});
+  /*port.disabled = true;*/
+var contador = 0;
 
-})(jQuery);*/
+/* CUANDO ABRO EL TOOGLER DE USUARIO SE DESACTIVAN LOS OTROS BOTONES*/
+  port.onclick = function () {
+    if(port.disabled != true){
+    notif.disabled = true; /*cuando hago clic desactivo el resto*/
+    contador++;
+
+    //* luego de hacer doble click que reactivan todos*/
+    if (contador%2==0){
+      notif.disabled = false;
+      contador = 0;
+    }
+    }}
+
+    notif.onclick = function () {
+      if(notif.disabled != true){
+      port.disabled = true; /*cuando hago clic desactivo el resto*/
+      contador++;
+  
+      //* luego de hacer doble click que reactivan todos*/
+      if (contador%2==0){
+        port.disabled = false;
+        contador = 0;
+      }
+    }
+      }
+
+  // evento de clic al div/*
+  /*port.addEventListener("click", function () {
+
+    contador=+ 1;
+    alert(contador);
+
+
+
+
+
+    /* collapses.forEach(function (collapse) {
+       collapse.classList.add("show");*/
+    /*
+    collapse.classList.toggle("show");*/
+
+    /*collapses.forEach(function (collapse) {
+            collapse.classList.remove("show");
+  });*/
+});
+
+
+
+
+
 
 
 /*evento carrusel*/
 
 var documentElement = document;
 
-documentElement.addEventListener('DOMContentLoaded', function() {
+documentElement.addEventListener('DOMContentLoaded', function () {
 
   const sliderMe = () => {
     let currentPosition = 0,
       sliderItem = documentElement.querySelectorAll('.slider-item'),
       sliderItemWidth = window.getComputedStyle(sliderItem[0]).flexBasis.match(/\d+\.?\d+/g),
       sliderInner = documentElement.querySelector('.slider-inner'),
-      
+
       control = {
         next: documentElement.querySelector('#next'),
-        slideNext() {			
+        slideNext() {
           currentPosition += parseFloat(sliderItemWidth);
           if (currentPosition > limitPosition) {
             currentPosition = 0;
@@ -41,8 +83,8 @@ documentElement.addEventListener('DOMContentLoaded', function() {
           sliderInner.style.right = currentPosition + '%';
         },
         prev: documentElement.querySelector('#prev'),
-       
-		slidePrev() {
+
+        slidePrev() {
           currentPosition -= parseFloat(sliderItemWidth);
           if (currentPosition < 0) {
             currentPosition = limitPosition;
@@ -55,7 +97,7 @@ documentElement.addEventListener('DOMContentLoaded', function() {
     control.next.addEventListener('click', control.slideNext)
     control.prev.addEventListener('click', control.slidePrev)
 
-    window.addEventListener("resize",function(){
+    window.addEventListener("resize", function () {
       currentPosition = 0;
       documentElement.querySelector('.slider-inner').style.right = currentPosition + '%';
     })
@@ -72,29 +114,29 @@ documentElement.addEventListener('DOMContentLoaded', function() {
 //*PARA SELECCIONAR LOS DIV DEL CARROUSEL!*//
 var disgraf = document.getElementById("box1");
 
-        // evento de clic al div
-        disgraf.addEventListener("click", function() {
-            // Redirecciona a una URL cuando se hace clic
-            window.location.href = "https://www.google.com/";
-        });
+// evento de clic al div
+disgraf.addEventListener("click", function () {
+  // Redirecciona a una URL cuando se hace clic
+  window.location.href = "https://www.google.com/";
+});
 
 var disind = document.getElementById("box2");
 
-        //evento de clic al div
-        disind.addEventListener("click", function() {
-            // Redirecciona a una URL cuando se hace clic
-            window.location.href = "/../index.html"; 
-        });
+//evento de clic al div
+disind.addEventListener("click", function () {
+  // Redirecciona a una URL cuando se hace clic
+  window.location.href = "/../index.html";
+});
 
 
 //*PARA SELECCIONAR LOS DIV DE PROYECTOS*//
 var pop1 = document.getElementById("popu01");
 
-        // evento de clic al div
-        pop1.addEventListener("click", function() {
-            // Redirecciona a una URL cuando se hace clic
-            window.location.href = "https://www.google.com/";
-        });
+// evento de clic al div
+pop1.addEventListener("click", function () {
+  // Redirecciona a una URL cuando se hace clic
+  window.location.href = "https://www.google.com/";
+});
 
 
 
@@ -102,14 +144,14 @@ var pop1 = document.getElementById("popu01");
 /*evento carrusel 2!*/
 var documentElemento = document;
 
-documentElemento.addEventListener('DOMContentLoaded', function() {
+documentElemento.addEventListener('DOMContentLoaded', function () {
 
   const sliderMe2 = () => {
     let currentPosition2 = 0,
       sliderItem2 = documentElemento.querySelectorAll('.slider-item2'),
       sliderItemWidth2 = window.getComputedStyle(sliderItem2[0]).flexBasis.match(/\d+\.?\d+/g),
       sliderInner2 = documentElemento.querySelector('.slider-inner2'),
-     
+
       control2 = {
         next2: documentElemento.querySelector('#next2'),
         slideNext2() {
@@ -117,25 +159,25 @@ documentElemento.addEventListener('DOMContentLoaded', function() {
           if (currentPosition2 > limitPosition2) {
             currentPosition2 = 0;
           }
-          sliderInner2.style.right = currentPosition2 + '%'; 
+          sliderInner2.style.right = currentPosition2 + '%';
         },
         prev2: documentElemento.querySelector('#prev2'),
-       
-		slidePrev2() {
+
+        slidePrev2() {
           currentPosition2 -= parseFloat(sliderItemWidth2);
           if (currentPosition2 < 0) {
             currentPosition2 = limitPosition2;
           }
-          sliderInner2.style.right = currentPosition2 + '%'; 
+          sliderInner2.style.right = currentPosition2 + '%';
         }
       },
       // Reducir el valor aquí para un desplazamiento mayor
-      limitPosition2 = sliderItemWidth2 * (sliderItem2.length - Math.floor(100 /sliderItemWidth2));
+      limitPosition2 = sliderItemWidth2 * (sliderItem2.length - Math.floor(100 / sliderItemWidth2));
 
     control2.next2.addEventListener('click', control2.slideNext2);
     control2.prev2.addEventListener('click', control2.slidePrev2);
 
-    window.addEventListener("resize2", function() {
+    window.addEventListener("resize2", function () {
       currentPosition2 = 0;
       documentElemento.querySelector('.slider-inner2').style.right = currentPosition2 + '%';
     });
@@ -150,14 +192,14 @@ documentElemento.addEventListener('DOMContentLoaded', function() {
 /* SEGUNDO CARRUSEL DE EMPLEO*/
 var documentoElemento = document;
 
-documentoElemento.addEventListener('DOMContentLoaded', function() {
+documentoElemento.addEventListener('DOMContentLoaded', function () {
 
   const sliderMe3 = () => {
     let currentPosition3 = 0,
       sliderItem3 = documentoElemento.querySelectorAll('.slider-item3'),
       sliderItemWidth3 = window.getComputedStyle(sliderItem3[0]).flexBasis.match(/\d+\.?\d+/g),
       sliderInner3 = documentoElemento.querySelector('.slider-inner3'),
-     
+
       control3 = {
         next3: documentoElemento.querySelector('#next3'),
         slideNext3() {
@@ -165,25 +207,25 @@ documentoElemento.addEventListener('DOMContentLoaded', function() {
           if (currentPosition3 > limitPosition3) {
             currentPosition3 = 0;
           }
-          sliderInner3.style.right = currentPosition3 + '%'; 
+          sliderInner3.style.right = currentPosition3 + '%';
         },
         prev3: documentoElemento.querySelector('#prev3'),
-       
-		slidePrev3() {
+
+        slidePrev3() {
           currentPosition3 -= parseFloat(sliderItemWidth3);
           if (currentPosition3 < 0) {
             currentPosition3 = limitPosition3;
           }
-          sliderInner3.style.right = currentPosition3 + '%'; 
+          sliderInner3.style.right = currentPosition3 + '%';
         }
       },
       // Reducir el valor aquí para un desplazamiento mayor
-      limitPosition3 = sliderItemWidth3 * (sliderItem3.length - Math.floor(100 /sliderItemWidth3));
+      limitPosition3 = sliderItemWidth3 * (sliderItem3.length - Math.floor(100 / sliderItemWidth3));
 
     control3.next3.addEventListener('click', control3.slideNext3);
     control3.prev3.addEventListener('click', control3.slidePrev3);
 
-    window.addEventListener("resize3", function() {
+    window.addEventListener("resize3", function () {
       currentPosition3 = 0;
       documentoElemento.querySelector('.slider-inner3').style.right = currentPosition3 + '%';
     });
@@ -208,18 +250,13 @@ boxTriggers.forEach((boxTrigger) => {
   const square = document.getElementById(squareId);
 
   // Agrega evento de mouseover
-  boxTrigger.addEventListener('mouseover', function() {
+  boxTrigger.addEventListener('mouseover', function () {
     square.style.visibility = 'visible';
-   /* square.style.display = 'block'; // Muestra el square al pasar el mouse*/
+    /* square.style.display = 'block'; // Muestra el square al pasar el mouse*/
   });
 
   // Agrega evento de mouseout
-  boxTrigger.addEventListener('mouseout', function() {
-     square.style.visibility = 'hidden'; // Cambia la visibilidad a oculto después de un retraso    
-    });
+  boxTrigger.addEventListener('mouseout', function () {
+    square.style.visibility = 'hidden'; // Cambia la visibilidad a oculto después de un retraso    
+  });
 });
-
-
-
-
-

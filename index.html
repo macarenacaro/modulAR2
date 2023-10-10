@@ -20,6 +20,14 @@
 
 					<a href="index.html"><img class="logonav" src="images/logo.png" alt="modulAR" />
 						<img class="logonav2" src="images/logoiso.png" alt="modulAR" /></a>
+
+						<ul id="titulos" class="navbar-nav">
+							<li class="nav-item active"><a href="index.html" class="nav-link">Descubre</a></li>
+							<li class="nav-item"><a href="#" class="nav-link">Portafolios</a></li>
+							<li class="nav-item"><a href="#" class="nav-link">Empleos</a></li>
+							<li class="nav-item"><a href="#" class="nav-link">Compras</a></li>
+						</ul>
+
 					<!--SEARCH-->
 					<form class="form-inline d-flex md-form form-sm mt-0">
 						<input id="buscar2" class="form-control form-control-sm ml-3 w-75" type="text"
@@ -27,24 +35,57 @@
 					  <a id="lupa2" href="#" class="search-icon"> <i class="fa fa-search"></i>
 						</a>
 					</form>
+
+
 					<!--NAVEGADOR DE CARRITO, NOTIFICACIONES, ETC-->
 					<div class="social-media order-lg-last">
-						<p class="mb-0 d-flex">
-							<a href="index.html" class="d-flex align-items-center justify-content-center"><span
-									class="fa fa-bell"><i class="sr-only">Notificaciones</i></span></a>
-							<a href="index.html" class="d-flex align-items-center justify-content-center"><span
-									class="fa fa-envelope"><i class="sr-only">Mensajes</i></span></a>
-							<a href="#" class="d-flex align-items-center justify-content-center"><span
-									class="fa fa-shopping-bag"><i class="sr-only">Compras</i></span></a>
-							<a href="#" class="d-flex align-items-center justify-content-center">
-								<span class="fa fa-user"><i class="sr-only">Cuenta</i></span>
+						<p class="mb-0 d-flex" style=" display:flex; flex-direction:wrap;  max-width: 300px;"> <!--/*border: solid pink 2px;*/-->
+							
+							<!--NOTIFICACIONES-->
+							<a id="notificaciones" data-toggle="collapse" data-target="#notif" aria-controls="notif"
+							class="d-flex align-items-center justify-content-center" style="background-image: url(images/notif.svg); background-size: cover;">
+							<!--	<span><i class="sr-only"></i></span>-->
+							</a>	
+						
+
+							<!--MENSAJES-->
+							<a id="iconmen" data-toggle="collapse" data-target="#mensj" aria-controls="mensj"
+							class="d-flex align-items-center justify-content-center" style="background-image: url(images/mensaje.svg); background-size: cover;">
+							<!--	<span><i class="sr-only"></i></span>-->
 							</a>
+
+
+							<!--COMPRAS-->
+							<a id="iconshop" data-toggle="collapse" data-target="#shop" aria-controls="shop"
+							class="d-flex align-items-center justify-content-center" style="background-image: url(images/shop.svg); background-size: cover;">
+							<!--	<span><i class="sr-only"></i></span>-->
+							</a>							
+
+
+							<!--CUENTA DE USUARIO NO REGISTRADO-->
+							<a id="iconusu" class="btn btn-secondary dropdown-toggle"  data-toggle="collapse" data-target="#usuario"
+							aria-controls="usuario" style="background-image: url(images/usuario_1.svg); background-size: cover;">
+							<!--	<span><i class="sr-only"></i></span>-->
+							</a>	
+
+							<!--CUENTA DE USUARIO REGISTRADO-->
 							<a id="portrait" class="btn btn-secondary dropdown-toggle"  data-toggle="collapse" data-target="#cuenta"
-							aria-controls="cuenta" style="background-image: url(images/portrait.svg); background-size: cover;">
-								<span  class=""><i class="sr-only">Cuenta</i></span>
-							</a>									
+							aria-controls="cuenta" style="background-image: url(images/perfil.svg); background-size: cover;">
+							<!--	<span><i class="sr-only"></i></span>-->
+							</a>	
+
+							
+ 							<!-- BOTON DE MENU DE NAVEGACION-->
+							 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-nav"
+							 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+							 <span class="fa fa-bars"></span>
+								 </button>
+
+
+							<!-- ************SECCIOÓN DROPDOWN************ -->
+							
 							<!-- DROPDOWN PARA CUENTA -->
-							<div class="collapse navbar-collapse" id="cuenta" >
+							<div class="collapse navbar-collapse" id="cuenta">
 								Cuenta
 								<ul class="dropdown-menu dropdown-menu-lg-end">
 									<li><a class="dropdown-item" href="index.html" >Mi Cuenta</a></li>
@@ -55,34 +96,35 @@
 
 								</ul>
 							</div>	
+							<!-- DROPDOWN PARA NOTIFICACIONES -->
+					<div class="collapse navbar-collapse" id="notif" >
+						Notificaciones
+						<ul class="navbar-nav ml-auto mr-md-3">
+							<li><a class="nav-item" href="index.html" >No tienes Notificaciones</a></li>
 
-							
-						</p>
-						
-						
-					</div>
-
-					
- 
-					                   
-					<!-- BOTON DE MENU DE NAVEGACION-->
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-						aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="fa fa-bars"></span>
-					</button>
-
-					<div class="collapse navbar-collapse" id="ftco-nav">
+						</ul>
+					</div>	
+							<!-- DROPDOWN PARA MENU -->
+					<div class="collapse navbar-collapse" id="menu-nav">
 						<ul class="navbar-nav ml-auto mr-md-3">
 							<li class="nav-item active"><a href="index.html" class="nav-link">Descubre</a></li>
 							<li class="nav-item"><a href="#" class="nav-link">Portafolios</a></li>
 							<li class="nav-item"><a href="#" class="nav-link">Empleos</a></li>
 							<li class="nav-item"><a href="#" class="nav-link">Compras</a></li>
-
 						</ul>
 					</div>
 
 
 
+
+						</p>						
+					</div>
+					<!-- FIN NAVEGADOR DE CARRITO-->
+					
+					
+			   <div class="collapse navbar-collapse" id="ftco-nav"  style="visibility: visible;">
+
+					</div>		
 
 					<!--SEARCH-->
 					<form class="form-inline d-flex md-form form-sm mt-0">
@@ -1212,8 +1254,10 @@
 		<script src="js/main.js"></script>
 		<!--<script src="js/jquery.min.js"></script>-->
 		<!--PARA QUE BAJE EL NAVBAR MENU-->
-		<!--<script src="js/bootstrap.min.js"></script>-->
-		<!--PARA QUE BAJE EL NAVBAR MENU-->
+		<!--<script src="js/popper.js"></script>-->
+		<!-- PARA QUE BAJE EL NAVBAR MENU-->
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 </body>

@@ -77,6 +77,16 @@ body {
 NAVBAR
 ---------------------*/
 
+
+#notif{
+  border: solid 1px #bebebe;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #ffffffa6 !important; ;
+  margin-top: 10px;
+}
+
+
 /*LOGO*/
 .logonav {
   height: 50px;
@@ -113,6 +123,11 @@ NAVBAR
 
 /*LISTA DROPDOWN SIN BULLETS*/
 @media (max-width: 990px) {
+/*ELIMINAR TITULOS Y AGREGAR MENU*/
+#titulos{
+  display: none;
+}
+
   .ftco-navbar-light .navbar-nav {
     list-style: none;
     padding-bottom: 10px;
@@ -130,6 +145,7 @@ NAVBAR
   border-radius: 6px;
   margin: auto;
   height: 30px;
+  margin-top: 13px;
 }
 
 #lupa {
@@ -220,6 +236,7 @@ NAVBAR
   text-transform: uppercase;
   font-size: 20px;
   letter-spacing: .1em;
+  margin-top: 13px;
 }
 
 .ftco-navbar-light .navbar-toggler:focus {
@@ -1622,24 +1639,21 @@ a:not([href]):not([tabindex]):focus {
 
 
 /*  ESTO HACE QUE SE RECOJA LA DROWPDOWN **/
-.btn-primary:not(:disabled):not(.disabled):active,
-.btn-primary:not(:disabled):not(.disabled).active,
-.show>.btn-primary.dropdown-toggle {
-  color: #fff;
-  background-color: #0062cc;
-  border-color: #005cbf;
-}
 
+
+
+
+/*
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show>.btn-primary.dropdown-toggle:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
-
+*/
 
 /*PROPIEDADES MENU*/
-
+/*
 .btn-secondary:not(:disabled):not(.disabled):active,
 .btn-secondary:not(:disabled):not(.disabled).active,
 .show>.btn-secondary.dropdown-toggle {
@@ -1671,20 +1685,22 @@ a:not([href]):not([tabindex]):focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
 }
+*/
+
 
 
 /*HACE QUE SE DEVUELVA EL DROPDOWN*/
-.btn-info:not(:disabled):not(.disabled):active,
+/*.btn-info:not(:disabled):not(.disabled):active,
 .btn-info:not(:disabled):not(.disabled).active,
 .show>.btn-info.dropdown-toggle {
   color: #fff;
   background-color: #117a8b;
   border-color: #10707f;
 }
-
+*/
 
 /*ESTO ES DEL NAVBAR --MENU*/
-#cuenta{border: solid 3px red;
+#cuenta{/*border: solid 3px red;*/
 z-index: 30px;}
 
 .collapse:not(.show) {
@@ -1697,11 +1713,10 @@ z-index: 30px;}
   overflow: hidden;
   -webkit-transition: height 0.35s ease;
   -o-transition: height 0.35s ease;
-  transition: height 0.35s ease;
+  transition: height 0.35s ease; 
 }
 
-
-
+/*
 @media (prefers-reduced-motion: reduce) {
   .collapsing {
     -webkit-transition: none;
@@ -1709,7 +1724,7 @@ z-index: 30px;}
     transition: none;
   }
 }
-
+*/
 
 .nav {
   display: -webkit-box;
@@ -2025,6 +2040,8 @@ z-index: 30px;}
   }
 }
 
+
+/*AQUII ESTA EL DROPWOND PARA GRANDES FORMATOS*/
 @media (min-width: 990px) {
   .navbar-expand-lg {
     -webkit-box-orient: horizontal;
@@ -2058,12 +2075,13 @@ z-index: 30px;}
     flex-wrap: nowrap;
   }
 
+  /*ESTE SE ELIMINÓ*/
   .navbar-expand-lg .navbar-collapse {
-    display: -webkit-box !important;
+    /*display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
     -ms-flex-preferred-size: auto;
-    flex-basis: auto;
+    flex-basis: auto;*/  
   }
 
   .navbar-expand-lg .navbar-toggler {
@@ -2114,11 +2132,11 @@ z-index: 30px;}
   }
 
   .navbar-expand-xl .navbar-collapse {
-    display: -webkit-box !important;
+ /*   display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
     -ms-flex-preferred-size: auto;
-    flex-basis: auto;
+    flex-basis: auto;*/
   }
 
   .navbar-expand-xl .navbar-toggler {
